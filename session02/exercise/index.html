@@ -10,8 +10,7 @@
          実習2: 基本的なHTMLページ
          まずは以下のh1とpを自分の内容に書き換えてみよう
     ============================================ -->
-    <h1>はじめてのWebページ</h1>
-    <p>HTMLの勉強を始めました！</p>
+    
 
     <!-- ============================================
          実習3: 自己紹介ページを作ろう
@@ -38,6 +37,18 @@
 
     <!-- TODO: aタグで好きなWebサイトへのリンクを1つ以上作ろう -->
     <!-- 例: <a href="https://github.com">GitHub</a> -->
+     <h1>阿部寛の自己紹介</h1> 
+    　<p>ホワイトハッカー専攻の2年生です。</p> 
+      <h2>趣味</h2>
+      <ul>
+        <li>音楽を聴く</li>
+        <li>ゲーム</li>
+        <li>サッカー</li>
+    　</ul>
+    <h2>好きなサイト</h2>
+     <a href="https://mentrecording.jp/snowman/">snowman</a>
+     <hr>
+    <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA23bMVQ.img?w=360&h=360&m=6"alt="サンプル画像">
 
     <!-- ============================================
          実習4: セマンティックタグで構造化しよう
@@ -65,6 +76,27 @@
              <p>&copy; 2026 あなたの名前</p>
          </footer>
     ============================================ -->
+    <hr>
+    <header>
+             <h1>阿部寛</h1>
+         </header>
+         <main>
+             <section>
+                 <h2>自己紹介</h2>
+                 <p>プログラミングしてます</p>
+             </section>
+             <section>
+                <h2>趣味</h2>
+                <ul>音楽を聴くことです</ul>
+             </section>
+             <section>
+                 <h2>好きなサイト</h2>
+                 <a href="https://mentrecording.jp/snowman/">snowman</a>
+             </section>
+         </main>
+         <footer>
+             <p>&copy; 2026 あなたの名前</p>
+         </footer>
 
     <!-- ============================================
          実習5: お問い合わせフォームを追加しよう
@@ -91,3 +123,16 @@
     -->
   </body>
 </html>
+<section id="contact">
+  <h2>お問い合わせ</h2>
+
+  <form>
+    <label for="name">名前</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">メールアドレス</label>
+    <input type="email" id="email" name="email">
+
+    <button type="submit">送信</button>
+  </form>
+</section>
