@@ -56,7 +56,7 @@ function toggleTodo(index) {
 function deleteTodo(index) {
   // ヒント:
      todos.splice(index, 1);
-  g   render();
+   render();
 }
 
 // ============================================================
