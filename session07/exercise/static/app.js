@@ -44,36 +44,36 @@ async function addTodo() {
 // -----------------------------------------------------
 // TODOの完了状態を切り替える（PUT）
 // -----------------------------------------------------
-async function toggleTodo(id, currentDone) {
-  try {
-    // ヒント: PUTリクエストを送信
-    //   await fetch(`/todos/${id}`, {
-    //     method: "PUT",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify({ done: !currentDone }),
-    //   });
-
-    await loadTodos();
-  } catch (error) {
-    console.error("TODO更新エラー:", error);
-  }
+async function toggleTodo(id, done) {
+ try {
+   await fetch(`/todos/${id}`, {
+     method: "PUT",
+     headers: { "Content-Type": "application/json" },
+     body: JSON.stringify({ done: !done })
+   });
+   await loadTodos();
+ } catch (error) {
+   console.error("TODO更新エラー:", error);
+ }
 }
+
+
+
 
 // -----------------------------------------------------
 // TODOを削除する（DELETE）
 // -----------------------------------------------------
 async function deleteTodo(id) {
-  try {
-    // ヒント: DELETEリクエストを送信
-    //   await fetch(`/todos/${id}`, {
-    //     method: "DELETE",
-    //   });
-
-    await loadTodos();
-  } catch (error) {
-    console.error("TODO削除エラー:", error);
-  }
+ try {
+   await fetch(`/todos/${id}`, {
+     method: "DELETE"
+   });
+   await loadTodos();
+ } catch (error) {
+   console.error("TODO削除エラー:", error);
+ }
 }
+
 
 // -----------------------------------------------------
 // TODO一覧をDOMに描画する — 実装済み
